@@ -134,6 +134,14 @@ namespace Business.Concrete
 
             return new SuccessResult();
         }
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(Product product)
+        {
+            Add(product);
+            if (product.U)
+            {
 
+            }
+        }
     }
 }
